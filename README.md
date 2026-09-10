@@ -46,6 +46,8 @@ npm run build      # prebuild migrates + seeds, then builds the static site
 npm run preview
 ```
 
+The home page catalog includes client-side filters for category and publisher. Multiple selected categories use OR matching, while a publisher selection combines with categories using AND matching; the static site remains fully prerendered.
+
 ## Database
 
 The SQLite database is built from `db/games.csv` — there is no live data to migrate.
