@@ -35,9 +35,26 @@ export default [
 
   // TypeScript-specific overrides
   {
-    files: ["**/*.ts"],
+    files: ["db/**/*.ts", "src/**/*.ts"],
     languageOptions: {
       parser: tseslint.parser,
+    },
+    rules: {
+      "@typescript-eslint/consistent-type-imports": "error",
+      quotes: ["error", "single", { avoidEscape: true }],
+      semi: ["error", "always"],
+      "comma-dangle": ["error", "always-multiline"],
+    },
+  },
+  {
+    files: ["e2e-tests/**/*.ts"],
+    languageOptions: {
+      parser: tseslint.parser,
+    },
+    rules: {
+      "@typescript-eslint/consistent-type-imports": "error",
+      quotes: ["error", "single", { avoidEscape: true }],
+      semi: ["error", "always"],
     },
   },
 ];

@@ -32,6 +32,11 @@ const games = await getAllGames(getDatabase());
 </Layout>
 ```
 
+## Component Contracts and Comments
+
+- Document every reusable component's `Props` interface with a short description of the component API and its fields. The interface is the contract between pages and components.
+- Comment intent and non-obvious rendering decisions only. Do not add comments that restate markup or expressions, and remove comments that become stale.
+
 ## Layouts
 
 - Create reusable layout components in `src/layouts/`
